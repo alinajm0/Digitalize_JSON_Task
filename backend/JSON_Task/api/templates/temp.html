@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Welcome to Temp.</h1>
+
+    <!-- <form action = "" method = "POST">
+        {% csrf_token %}
+        <label>Add New Fruits item</label>
+        <br>
+        <label for="id">ID Of New Fruits item</label>
+        <input id="id" type="number" name="id">
+        <br>
+        <label for="name">Name Of New Fruits item</label>
+        <input id="name" type="text" name="name">
+        <br>
+        <label for="desc">description Of New Fruits item</label>
+        <input id="description" type="text" name="description">
+        <br>
+        <input type="submit" value="Add">
+    </form> -->
+     
+    {% for ele in context %}
+    <p> Name of Fruits  is:- {{  ele.name }}</p>
+    <p> ID of Fruits  is:- {{  ele.id }}</p>
+    <p> description of Fruits:-  is {{  ele.description }}</p>
+    <hr>
+    {% endfor %}
+
+</body>
+</html>

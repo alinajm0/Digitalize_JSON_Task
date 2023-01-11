@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Something Wrong</h1>
+
+    {% if context == 'method_error'  %}
+    <p>Wrong Request Method</p>
+    {% endif %}
+
+    {% if context == 'id_error'  %}
+    <P>Invalid ID {{ id }}</P>
+    {% endif %}
+
+    {% if context == 'id_exist'  %}
+    <P>Exist ID {{ id }}</P>
+    {% endif %}
+
+    {% if context == 'id__not_exist'  %}
+    <P>Not Exist ID</P>
+    {% endif %}
+
+</body>
+</html>
